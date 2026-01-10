@@ -36,8 +36,7 @@ public class Calculator1 {
                         result = firstNum / secondNum;
                         break;
 
-                    default: //변수와 값이 불일치하면 이곳을 실행
-                        //continue();
+                    default:
                         break;
                 }
                 System.out.println("결과: "+result);
@@ -46,12 +45,12 @@ public class Calculator1 {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
             }
 
-            String str = "";
+            String str = " ";
             System.out.print("더 계산하시겠습니까? (exit 입력 시 종료) >>");
             str = sc.next();
             if (str.equals("exit")){
                 b = false;
-            } else {continue;}
+            }
 
         }
     }
