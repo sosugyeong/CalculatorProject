@@ -45,6 +45,6 @@ public class Calculator2 {
 
     public void removeResult(){
         list.remove(0);
-        System.out.println(list);
+        System.out.println(getList());
     }
 }

@@ -22,13 +22,13 @@ public class App {
                 int cal = c.calculate(num1, num2, sign);
                 System.out.print("결과: "+cal);
 
-                System.out.print("값을 삭제하시겠습니까? (yes 입력시 삭제)>> ");
+                System.out.print("\n값을 삭제하시겠습니까? (yes 입력시 삭제)>> ");
                 String str2 = sc.next();
                 if (str2.equals("yes")){
                     c.removeResult();
                 }
 
-                System.out.print("\n더 계산 하시겠습니까? (exit 입력시 종료)>> ");
+                System.out.print("더 계산 하시겠습니까? (exit 입력시 종료)>> ");
                 String str = sc.next();
                 if (str.equals("exit"))b=false;
 
@@ -36,7 +36,6 @@ public class App {
                 System.out.println("나눗셈 연산에서 분모(두번째 정수)에 0이 입력될 수 없습니다.");
             }
         }
-
 
     }
 }
