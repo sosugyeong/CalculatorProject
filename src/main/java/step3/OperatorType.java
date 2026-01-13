@@ -6,6 +6,7 @@ public enum OperatorType {
     DIVIDE('/'),
     MULTIPLE('*');
 
+    //사칙연산 기호를 저장할 필드
     private final char sign;
 
     //생성자
@@ -18,11 +19,11 @@ public enum OperatorType {
     }
 
     public static OperatorType matchSign(char sign){
-        for(OperatorType type : step3.OperatorType.values()){
+        for(OperatorType type : values()){
             if (type.getSign() == sign){
                 return type;
             }
         }
-        throw new IllegalArgumentException(sign+"는 사칙연산 기호가 아닙니다.");
+        throw new IllegalArgumentException(sign+"은 사칙연산 기호가 아닙니다.");
     }
 }
