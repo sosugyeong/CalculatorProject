@@ -16,10 +16,16 @@ public class App {
                 System.out.print("두번째 숫자를 입력하세요: ");
                 double num2 = sc.nextDouble();
 
+                String sign;
                 OperatorType type;
-                System.out.print("사칙연산 기호(+, -, /, *)를 입력하세요: ");
-                String sign = sc.next();
-                type = OperatorType.matchSign(sign.charAt(0));
+                try{
+                    System.out.print("사칙연산 기호(+, -, /, *)를 입력하세요: ");
+                    sign = sc.next();
+                    type = OperatorType.matchSign(sign.charAt(0));
+                }catch (IllegalArgumentException e){
+                    System.out.println(e.getMessage());
+                    continue;
+                }
 
                 double cal = ac.calculate(num1, num2, type);
                 if (Double.isInfinite(cal) || Double.isNaN(cal)){
